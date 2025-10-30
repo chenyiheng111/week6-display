@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密码生成器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="password-generator">
+            <h1>密码生成器</h1>
+            
+            <!-- 密码显示区域 -->
+            <div class="password-display">
+                <input type="text" id="password" readonly placeholder="点击生成密码">
+                <button id="copy" class="copy-btn">复制</button>
+            </div>
+            
+            <!-- 密码强度指示器 -->
+            <div class="strength-indicator">
+                <span>密码强度：</span>
+                <div class="strength-bar">
+                    <div id="strength-bar-fill" class="strength-bar-fill"></div>
+                </div>
+                <span id="strength-text">弱</span>
+            </div>
+            
+            <!-- 设置面板 -->
+            <div class="settings">
+                <!-- 密码长度 -->
+                <div class="setting-item">
+                    <label for="length">密码长度</label>
+                    <div class="length-control">
+                        <input type="range" id="length" min="4" max="32" value="12">
+                        <span id="length-value">12</span>
+                    </div>
+                </div>
+                
+                <!-- 字符类型选项 -->
+                <div class="setting-item">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="uppercase" checked>
+                        <span class="checkmark"></span>
+                        包含大写字母 (A-Z)
+                    </label>
+                </div>
+                
+                <div class="setting-item">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="lowercase" checked>
+                        <span class="checkmark"></span>
+                        包含小写字母 (a-z)
+                    </label>
+                </div>
+                
+                <div class="setting-item">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="checkmark"></span>
+                        包含数字 (0-9)
+                    </label>
+                </div>
+                
+                <div class="setting-item">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="symbols" checked>
+                        <span class="checkmark"></span>
+                        包含符号 (!@#$%^&*等)
+                    </label>
+                </div>
+            </div>
+            
+            <!-- 生成按钮 -->
+            <button id="generate" class="generate-btn">生成密码</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

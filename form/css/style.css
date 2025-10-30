@@ -1,0 +1,120 @@
+/* 重置 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.register-box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding: 40px 35px;
+}
+
+.register-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #66a6ff;
+}
+
+.error {
+    font-size: 12px;
+    color: #e74c3c;
+    margin-top: 4px;
+    height: 16px;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+}
+.checkbox-group input[type=checkbox] {
+    margin-right: 6px;
+}
+.checkbox-group a {
+    color: #66a6ff;
+    text-decoration: none;
+}
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #66a6ff 0%, #89f7fe 100%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.register-btn:hover {
+    opacity: 0.9;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.login-link a {
+    color: #66a6ff;
+}
+
+.msg-box {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+}
+.msg-box.success {
+    color: #27ae60;
+    display: block;
+}
+.msg-box.error {
+    color: #e74c3c;
+    display: block;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <h2 class="register-title">创建新账户</h2>
+
+            <form id="registerForm" class="register-form" novalidate>
+                <!-- 用户名 -->
+                <div class="form-group">
+                    <label for="username">用户名 *</label>
+                    <input type="text" id="username" placeholder="3~12 位字母或数字" required>
+                    <span class="error" id="usernameErr"></span>
+                </div>
+
+                <!-- 邮箱 -->
+                <div class="form-group">
+                    <label for="email">邮箱 *</label>
+                    <input type="email" id="email" placeholder="example@domain.com" required>
+                    <span class="error" id="emailErr"></span>
+                </div>
+
+                <!-- 密码 -->
+                <div class="form-group">
+                    <label for="password">密码 *</label>
+                    <input type="password" id="password" placeholder="至少 6 位" required>
+                    <span class="error" id="passwordErr"></span>
+                </div>
+
+                <!-- 确认密码 -->
+                <div class="form-group">
+                    <label for="confirmPwd">确认密码 *</label>
+                    <input type="password" id="confirmPwd" required>
+                    <span class="error" id="confirmPwdErr"></span>
+                </div>
+
+                <!-- 手机号（可选） -->
+                <div class="form-group">
+                    <label for="phone">手机号</label>
+                    <input type="tel" id="phone" placeholder="选填">
+                </div>
+
+                <!-- 协议 -->
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="agree" required>
+                        我已阅读并同意 <a href="#" target="_blank">《用户协议》</a>
+                    </label>
+                    <span class="error" id="agreeErr"></span>
+                </div>
+
+                <button type="submit" class="register-btn">立即注册</button>
+            </form>
+
+            <div class="login-link">
+                已有账户？<a href="../login/index.html">去登录</a>
+            </div>
+
+            <div id="msg" class="msg-box"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
